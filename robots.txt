@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.passtheoryfast.co.uk/sitemap.xml
+
+# Block any admin paths if added in future
+Disallow: /admin/
+Disallow: /api/

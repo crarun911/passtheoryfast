@@ -1,0 +1,46 @@
+/* layout.css — header, container, screens, grid */
+.site-header {
+  position:sticky; top:0; z-index:200;
+  background:#0b0c0c;
+  height:var(--header-h);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 16px; gap:12px;
+}
+.brand-logo { display:flex; align-items:center; gap:8px; text-decoration:none; }
+.brand-icon  { width:32px; height:32px; flex-shrink:0; }
+.brand-name  { color:#fff; font-size:18px; font-weight:700; letter-spacing:-0.3px; white-space:nowrap; }
+.brand-accent { color:var(--yellow); }
+.phase-nav { display:flex; gap:0; flex:1; justify-content:center; }
+.phase-tab {
+  display:flex; align-items:center; gap:6px;
+  padding:0 14px; height:var(--header-h);
+  color:#888; font-size:13px; font-weight:600;
+  border-bottom:3px solid transparent;
+  cursor:default; user-select:none; white-space:nowrap;
+  transition:color 0.15s,border-color 0.15s;
+}
+.phase-tab .tab-num {
+  width:20px; height:20px; border-radius:50%; background:#333;
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; flex-shrink:0;
+}
+.phase-tab.active { color:#fff; border-bottom-color:var(--yellow); }
+.phase-tab.active .tab-num { background:var(--yellow); color:#000; }
+.phase-tab.done { color:var(--green); }
+.phase-tab.done .tab-num { background:var(--green); color:#fff; }
+.header-right { display:flex; align-items:center; }
+.icon-btn { background:none; border:none; color:#aaa; font-size:18px; padding:6px; border-radius:4px; }
+.icon-btn:hover { color:#fff; background:rgba(255,255,255,0.1); }
+.container { max-width:960px; margin:0 auto; padding:0 16px; width:100%; }
+.screen { display:none; padding-bottom:60px; }
+.screen.active { display:block; }
+.center-screen { display:flex; justify-content:center; padding-top:40px; }
+/* Test layout — sidebar + main */
+.test-layout { display:flex; gap:20px; padding-top:16px; align-items:flex-start; }
+.q-sidebar {
+  width:220px; flex-shrink:0;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--radius); padding:14px; position:sticky; top:calc(var(--header-h) + 60px);
+}
+.q-main { flex:1; min-width:0; }
+.haz-layout { padding-top:16px; }
